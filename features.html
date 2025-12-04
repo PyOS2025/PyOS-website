@@ -1,0 +1,378 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PyOS Features - Detailed Overview</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    <header>
+        <nav>
+            <div class="logo">
+                <h1>PyOS</h1>
+                <p>Python Operating System</p>
+            </div>
+            <ul class="nav-links">
+                <li><a href="index.html">Home</a></li>
+            </ul>
+        </nav>
+    </header>
+
+    <section id="kernel" class="section">
+        <div class="container">
+            <h2>Modular Kernel Architecture</h2>
+            <p>The heart of PyOS is its flexible kernel, designed with modularity in mind. Unlike traditional monolithic kernels, PyOS's kernel is composed of interchangeable modules that can be loaded and unloaded dynamically.</p>
+            <div class="feature-details">
+                <div class="detail-card">
+                    <h3>Driver System</h3>
+                    <p>Extensible driver architecture supporting console, network, and hardware drivers. Easily add new hardware support without kernel recompilation.</p>
+                    <ul>
+                        <li>Plug-and-play device detection</li>
+                        <li>Hot-swappable driver modules</li>
+                        <li>Generic driver interfaces</li>
+                        <li>Hardware abstraction layer</li>
+                        <li>Device tree configuration</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Service Management</h3>
+                    <p>Built-in service manager handles system services like cron, logging, and monitoring. Services can be started, stopped, and configured at runtime.</p>
+                    <ul>
+                        <li>Dependency-based service startup</li>
+                        <li>Automatic service restart on failure</li>
+                        <li>Service priority management</li>
+                        <li>Resource usage monitoring</li>
+                        <li>Configuration file parsing</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Process Scheduling</h3>
+                    <p>Efficient process scheduler ensures fair CPU time allocation and supports both foreground and background processes.</p>
+                    <ul>
+                        <li>Round-robin scheduling algorithm</li>
+                        <li>Priority-based task management</li>
+                        <li>Preemptive multitasking</li>
+                        <li>Process state tracking</li>
+                        <li>CPU time slicing</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Memory Management</h3>
+                    <p>Advanced memory allocation and management system with garbage collection and virtual memory support.</p>
+                    <ul>
+                        <li>Dynamic memory allocation</li>
+                        <li>Virtual address spaces</li>
+                        <li>Memory protection mechanisms</li>
+                        <li>Page fault handling</li>
+                        <li>Memory defragmentation</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Interrupt Handling</h3>
+                    <p>Comprehensive interrupt system for handling hardware events and system calls efficiently.</p>
+                    <ul>
+                        <li>Hardware interrupt routing</li>
+                        <li>Software interrupt generation</li>
+                        <li>Interrupt priority levels</li>
+                        <li>Context switching</li>
+                        <li>Signal handling</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>System Calls</h3>
+                    <p>Well-defined system call interface for user-space applications to access kernel services.</p>
+                    <ul>
+                        <li>Standard POSIX-like calls</li>
+                        <li>Python-specific extensions</li>
+                        <li>Security validation</li>
+                        <li>Parameter sanitization</li>
+                        <li>Return value handling</li>
+                    </ul>
+                </div>
+            </div>
+
+
+    <section id="security" class="section alt-bg">
+        <div class="container">
+            <h2>Comprehensive Security Suite</h2>
+            <p>Security is paramount in PyOS. The system includes multiple layers of protection to keep your data safe and your system secure.</p>
+            <div class="feature-details">
+                <div class="detail-card">
+                    <h3>Antivirus Engine</h3>
+                    <p>Built-in antivirus scanner that monitors file system activity and detects malicious software. Regular signature updates keep threats at bay.</p>
+                    <ul>
+                        <li>Real-time file scanning</li>
+                        <li>Behavioral analysis</li>
+                        <li>Quarantine system</li>
+                        <li>Automatic updates</li>
+                        <li>False positive reduction</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Firewall</h3>
+                    <p>Configurable firewall with rule-based filtering. Supports both inbound and outbound traffic control with detailed logging.</p>
+                    <ul>
+                        <li>Packet filtering</li>
+                        <li>Application-level blocking</li>
+                        <li>Traffic logging</li>
+                        <li>Custom rule creation</li>
+                        <li>Network zone support</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>User Management</h3>
+                    <p>Robust user and permission system with sudo capabilities. Fine-grained access control for files, processes, and system resources.</p>
+                    <ul>
+                        <li>Multi-user support</li>
+                        <li>Role-based permissions</li>
+                        <li>Password policies</li>
+                        <li>Audit logging</li>
+                        <li>Session management</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Encryption</h3>
+                    <p>Full-disk encryption and secure communication channels protect sensitive data at rest and in transit.</p>
+                    <ul>
+                        <li>AES-256 encryption</li>
+                        <li>Secure key storage</li>
+                        <li>TLS/SSL support</li>
+                        <li>Certificate management</li>
+                        <li>Data integrity checks</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Intrusion Detection</h3>
+                    <p>Advanced intrusion detection system monitors for suspicious activity and potential security breaches.</p>
+                    <ul>
+                        <li>Anomaly detection</li>
+                        <li>Pattern recognition</li>
+                        <li>Alert generation</li>
+                        <li>Incident response</li>
+                        <li>Security reporting</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Secure Boot</h3>
+                    <p>Verified boot process ensures system integrity from power-on to full operation.</p>
+                    <ul>
+                        <li>Bootloader verification</li>
+                        <li>Kernel integrity checks</li>
+                        <li>Module signing</li>
+                        <li>Chain of trust</li>
+                        <li>Recovery mechanisms</li>
+                    </ul>
+                </div>
+            </div>
+           
+
+    <section id="networking" class="section">
+        <div class="container">
+            <h2>Advanced Networking Capabilities</h2>
+            <p>PyOS provides comprehensive networking support, making it suitable for both desktop and server environments.</p>
+            <div class="feature-details">
+                <div class="detail-card">
+                    <h3>Network Manager</h3>
+                    <p>Intuitive network configuration tool supporting Wi-Fi, Ethernet, and VPN connections. Automatic network detection and switching.</p>
+                    <ul>
+                        <li>Wireless network scanning</li>
+                        <li>Automatic IP configuration</li>
+                        <li>DNS management</li>
+                        <li>Network profiles</li>
+                        <li>Connection monitoring</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>SSH Server</h3>
+                    <p>Secure Shell server for remote access. Supports key-based authentication and encrypted communications.</p>
+                    <ul>
+                        <li>RSA/DSA/ECDSA key support</li>
+                        <li>Password authentication</li>
+                        <li>Port forwarding</li>
+                        <li>SCP/SFTP support</li>
+                        <li>Session multiplexing</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Samba Integration</h3>
+                    <p>Seamless file sharing with Windows and other systems. Configurable shares with access controls and user authentication.</p>
+                    <ul>
+                        <li>CIFS/SMB protocol support</li>
+                        <li>Active Directory integration</li>
+                        <li>Share permissions</li>
+                        <li>Print server capabilities</li>
+                        <li>Workgroup configuration</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Web Server</h3>
+                    <p>Built-in HTTP/HTTPS server for hosting web applications and services.</p>
+                    <ul>
+                        <li>WSGI application support</li>
+                        <li>SSL/TLS encryption</li>
+                        <li>Virtual hosting</li>
+                        <li>Request routing</li>
+                        <li>Static file serving</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Network Protocols</h3>
+                    <p>Support for various network protocols including TCP/IP, UDP, ICMP, and more.</p>
+                    <ul>
+                        <li>TCP socket programming</li>
+                        <li>UDP datagram support</li>
+                        <li>Raw socket access</li>
+                        <li>Network sniffing tools</li>
+                        <li>Protocol analyzers</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Network Security</h3>
+                    <p>Advanced network security features including VPN support and traffic encryption.</p>
+                    <ul>
+                        <li>OpenVPN integration</li>
+                        <li>IPsec support</li>
+                        <li>WireGuard compatibility</li>
+                        <li>Tor network access</li>
+                        <li>Proxy server support</li>
+                    </ul>
+                </div>
+            </div>
+
+
+    <section id="development" class="section alt-bg">
+        <div class="container">
+            <h2>Development Environment</h2>
+            <p>PyOS is not just an OS—it's a development platform. Build, test, and deploy Python applications directly on the system.</p>
+            <div class="feature-details">
+                <div class="detail-card">
+                    <h3>Python Integration</h3>
+                    <p>Native Python support with pre-installed standard library. Run scripts, develop applications, and extend the system effortlessly.</p>
+                    <ul>
+                        <li>Python 3.x support</li>
+                        <li>Standard library included</li>
+                        <li>Virtual environment support</li>
+                        <li>PIP package manager</li>
+                        <li>Interactive Python shell</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Package Ecosystem</h3>
+                    <p>Rich package ecosystem with tools for package creation, installation, and management. Support for both local and remote repositories.</p>
+                    <ul>
+                        <li>PyPI integration</li>
+                        <li>Local package repositories</li>
+                        <li>Dependency resolution</li>
+                        <li>Package building tools</li>
+                        <li>Version management</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>API Access</h3>
+                    <p>Comprehensive API for system interaction. Access hardware, manage processes, and control system resources programmatically.</p>
+                    <ul>
+                        <li>System call interface</li>
+                        <li>Hardware abstraction layer</li>
+                        <li>Process management API</li>
+                        <li>File system operations</li>
+                        <li>Network programming interfaces</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Development Tools</h3>
+                    <p>Built-in development tools including editors, debuggers, and testing frameworks.</p>
+                    <ul>
+                        <li>Integrated text editor</li>
+                        <li>Python debugger</li>
+                        <li>Unit testing framework</li>
+                        <li>Code profiling tools</li>
+                        <li>Documentation generators</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Version Control</h3>
+                    <p>Integrated version control system for tracking changes and collaboration.</p>
+                    <ul>
+                        <li>Git integration</li>
+                        <li>Repository management</li>
+                        <li>Branching and merging</li>
+                        <li>Remote repository support</li>
+                        <li>Conflict resolution</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Database Support</h3>
+                    <p>Built-in database engines for data storage and management applications.</p>
+                    <ul>
+                        <li>SQLite integration</li>
+                        <li>Database migration tools</li>
+                        <li>ORM support</li>
+                        <li>Query optimization</li>
+                        <li>Data backup utilities</li>
+                    </ul>
+                </div>
+            </div>
+         
+
+    <section id="performance" class="section">
+        <div class="container">
+            <h2>Performance & Optimization</h2>
+            <p>PyOS is designed for efficiency, providing high performance while maintaining system stability and resource management.</p>
+            <div class="feature-details">
+                <div class="detail-card">
+                    <h3>Memory Optimization</h3>
+                    <p>Advanced memory management techniques ensure efficient resource utilization.</p>
+                    <ul>
+                        <li>Garbage collection tuning</li>
+                        <li>Memory pooling</li>
+                        <li>Cache management</li>
+                        <li>Memory profiling</li>
+                        <li>Leak detection</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>CPU Scheduling</h3>
+                    <p>Intelligent CPU scheduling algorithms maximize system responsiveness.</p>
+                    <ul>
+                        <li>Priority scheduling</li>
+                        <li>Load balancing</li>
+                        <li>CPU affinity</li>
+                        <li>Real-time scheduling</li>
+                        <li>Power management</li>
+                    </ul>
+                </div>
+                <div class="detail-card">
+                    <h3>Disk I/O Optimization</h3>
+                    <p>Optimized file system operations for fast data access and storage.</p>
+                    <ul>
+                        <li>Buffering strategies</li>
+                        <li>Read-ahead caching</li>
+                        <li>Write-back caching</li>
+                        <li>Filesystem journaling</li>
+                        <li>Defragmentation tools</li>
+                    </ul>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <footer>
+        <div class="footer-links">
+            <a href="index.html">Back to Home</a>
+            <a href="https://github.com/PyOS2025">GitHub</a>
+        </div>
+    </footer>
+
+    <script>
+        document.querySelectorAll('a[href^="#"]').forEach(anchor => {
+            anchor.addEventListener('click', function (e) {
+                e.preventDefault();
+                document.querySelector(this.getAttribute('href')).scrollIntoView({
+                    behavior: 'smooth'
+                });
+            });
+        });
+    </script>
+</body>
+</html>
