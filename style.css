@@ -509,6 +509,241 @@ button:focus {
     }
 }
 
+/* Floating AI Button */
+.ai-button {
+    position: fixed;
+    bottom: 20px;
+    right: 20px;
+    width: 60px;
+    height: 60px;
+    background: linear-gradient(45deg, #00d4ff, #0099cc);
+    border-radius: 50%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    color: #000;
+    font-weight: bold;
+    font-size: 1.2rem;
+    text-decoration: none;
+    box-shadow: 0 4px 12px rgba(0, 212, 255, 0.3);
+    z-index: 1000;
+    transition: transform 0.3s ease;
+}
+
+.ai-button:hover {
+    transform: scale(1.1);
+}
+
+/* Chat Bot */
+.chat-bot {
+    position: fixed;
+    bottom: 90px;
+    right: 20px;
+    width: 350px;
+    max-height: 500px;
+    background-color: #1a1a1a;
+    border-radius: 10px;
+    border: 1px solid rgba(0, 212, 255, 0.3);
+    box-shadow: 0 5px 20px rgba(0, 0, 0, 0.5);
+    z-index: 999;
+    display: none;
+    flex-direction: column;
+}
+
+#chat-bot:target {
+    display: flex;
+}
+
+.chat-container {
+    display: flex;
+    flex-direction: column;
+    height: 100%;
+    overflow: hidden;
+}
+
+.chat-header {
+    background-color: #00d4ff;
+    color: #000;
+    padding: 1rem;
+    position: relative;
+}
+
+.chat-header h3 {
+    margin: 0;
+    font-size: 1.2rem;
+    font-weight: bold;
+}
+
+.chat-header p {
+    margin: 0.25rem 0 0;
+    font-size: 0.8rem;
+}
+
+.chat-close {
+    position: absolute;
+    top: 0.5rem;
+    right: 0.5rem;
+    color: #000;
+    text-decoration: none;
+    font-size: 1.5rem;
+    font-weight: bold;
+    line-height: 1;
+}
+
+.chat-messages {
+    flex: 1;
+    overflow-y: auto;
+    padding: 1rem;
+    background-color: #0a0a0a;
+}
+
+.message {
+    margin-bottom: 1rem;
+    display: flex;
+}
+
+.message-content {
+    background-color: #333;
+    padding: 0.75rem 1rem;
+    border-radius: 18px;
+    max-width: 80%;
+    line-height: 1.4;
+    word-wrap: break-word;
+}
+
+.bot-message .message-content {
+    background-color: #00d4ff;
+    color: #000;
+}
+
+.response-toggle {
+    display: none;
+}
+
+.response {
+    display: none;
+    animation: responseFadeIn 0.5s ease-in;
+}
+
+@keyframes responseFadeIn {
+    from {
+        opacity: 0;
+        transform: translateY(10px);
+    }
+    to {
+        opacity: 1;
+        transform: translateY(0);
+    }
+}
+
+#response-1-toggle:checked ~ .response-1 {
+    display: block;
+}
+
+#response-2-toggle:checked ~ .response-2 {
+    display: block;
+}
+
+#response-3-toggle:checked ~ .response-3 {
+    display: block;
+}
+
+#response-4-toggle:checked ~ .response-4 {
+    display: block;
+}
+
+#response-5-toggle:checked ~ .response-5 {
+    display: block;
+}
+
+#response-6-toggle:checked ~ .response-6 {
+    display: block;
+}
+
+#response-7-toggle:checked ~ .response-7 {
+    display: block;
+}
+
+#response-8-toggle:checked ~ .response-8 {
+    display: block;
+}
+
+#response-9-toggle:checked ~ .response-9 {
+    display: block;
+}
+
+#response-10-toggle:checked ~ .response-10 {
+    display: block;
+}
+
+#response-11-toggle:checked ~ .response-11 {
+    display: block;
+}
+
+#response-12-toggle:checked ~ .response-12 {
+    display: block;
+}
+
+#response-13-toggle:checked ~ .response-13 {
+    display: block;
+}
+
+#response-14-toggle:checked ~ .response-14 {
+    display: block;
+}
+
+#response-15-toggle:checked ~ .response-15 {
+    display: block;
+}
+
+.chat-input {
+    padding: 1rem;
+    border-top: 1px solid #333;
+    background-color: #1a1a1a;
+}
+
+.question-buttons {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 0.5rem;
+    justify-content: flex-start;
+    max-height: 150px;
+    overflow-y: auto;
+}
+
+.question-btn {
+    display: inline-block;
+    background-color: #333;
+    color: #e0e0e0;
+    padding: 0.5rem 1rem;
+    text-decoration: none;
+    border-radius: 20px;
+    font-size: 0.8rem;
+    transition: background-color 0.3s ease;
+    border: 1px solid #555;
+}
+
+.question-btn:hover {
+    background-color: #555;
+}
+
+/* Responsive for chat */
+@media (max-width: 480px) {
+    .chat-bot {
+        width: 90vw;
+        bottom: 80px;
+        right: 5vw;
+    }
+
+    .ai-button {
+        bottom: 10px;
+        right: 10px;
+        width: 50px;
+        height: 50px;
+        font-size: 1rem;
+    }
+}
+
 /* Reduced motion support */
 @media (prefers-reduced-motion: reduce) {
     * {
@@ -1568,4 +1803,166 @@ button:focus {
 
 .update-content li {
     margin-bottom: 0.5rem;
+}
+
+
+.section-description {
+    text-align: center;
+    color: #888;
+    margin-bottom: 3rem;
+    font-size: 1.1rem;
+}
+
+.tweets-container {
+    max-width: 600px;
+    margin: 0 auto;
+}
+
+.tweet {
+    background-color: #1a1a1a;
+    border: 1px solid #333;
+    border-radius: 16px;
+    padding: 1rem;
+    margin-bottom: 1rem;
+    transition: background-color 0.2s ease;
+}
+
+.tweet:hover {
+    background-color: #1e1e1e;
+}
+
+.tweet-header {
+    display: flex;
+    align-items: flex-start;
+    gap: 0.75rem;
+    margin-bottom: 0.5rem;
+}
+
+.tweet-avatar {
+    flex-shrink: 0;
+}
+
+.avatar-img {
+    width: 40px;
+    height: 40px;
+    border-radius: 50%;
+    object-fit: cover;
+}
+
+.tweet-user-info {
+    flex: 1;
+    min-width: 0;
+}
+
+.tweet-user-name {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    flex-wrap: wrap;
+}
+
+.display-name {
+    color: #fff;
+    font-weight: bold;
+    font-size: 0.95rem;
+}
+
+.username {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.tweet-time {
+    color: #888;
+    font-size: 0.9rem;
+}
+
+.tweet-content {
+    color: #e0e0e0;
+    line-height: 1.5;
+    margin-bottom: 0.75rem;
+    word-wrap: break-word;
+}
+
+.tweet-content p {
+    margin: 0 0 0.75rem 0;
+}
+
+.tweet-content p:last-child {
+    margin-bottom: 0;
+}
+
+.tweet-media {
+    margin-top: 0.75rem;
+    border-radius: 12px;
+    overflow: hidden;
+    border: 1px solid #333;
+}
+
+.tweet-image {
+    width: 100%;
+    height: auto;
+    display: block;
+    max-height: 400px;
+    object-fit: cover;
+}
+
+.tweet-actions {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    padding-top: 0.5rem;
+    border-top: 1px solid #333;
+    margin-top: 0.75rem;
+    max-width: 400px;
+}
+
+.action-item {
+    display: flex;
+    align-items: center;
+    gap: 0.25rem;
+    color: #888;
+    font-size: 0.85rem;
+    cursor: pointer;
+    transition: color 0.2s ease;
+    padding: 0.25rem;
+    border-radius: 4px;
+}
+
+.action-item:hover {
+    color: #00d4ff;
+    background-color: rgba(0, 212, 255, 0.1);
+}
+
+.action-icon {
+    font-size: 1rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 18px;
+    height: 18px;
+}
+
+.action-item span {
+    font-weight: 500;
+}
+
+/* Responsive adjustments for tweets */
+@media (max-width: 480px) {
+    .tweets-container {
+        max-width: 100%;
+    }
+
+    .tweet {
+        border-radius: 12px;
+        padding: 0.75rem;
+    }
+
+    .tweet-actions {
+        max-width: 100%;
+    }
+
+    .action-item {
+        font-size: 0.8rem;
+    }
 }
